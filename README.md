@@ -63,6 +63,10 @@ The last domain used is stored in the [site visitor's browser](https://en.wikipe
 
 Yes, see a list here: https://github.com/Uden-AI/fediverse-share#similar-projects-to-compare-to, including this project itself.
 
+Additional projects include:
+
+- [ShareOpenly](https://shareopenly.org/) by [Ben Werdmuller](https://about.werd.io/)
+
 **Q: Is this really free to use?**
 
 Yep. But if you do have any extra cash, see [stefanbohacek.com/support-my-work](https://stefanbohacek.com/support-my-work/).
