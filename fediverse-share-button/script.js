@@ -59,9 +59,10 @@
       )[0];
 
     iconElement.src = `${getFSBPath()}/icons/${software}.svg`;
-    if (supportedSoftware.includes(software)) {
-      supportNote.classList.add("fsb-d-none");
-    } else {
+
+    supportNote.classList.add("fsb-d-none");
+
+    if (domainInput.value && domainInput.value.trim().length > 0 && !supportedSoftware.includes(software)){
       supportNoteLink.href = `https:\\${domainInput.value}`;
       supportNoteLink.innerHTML = domainInput.value;
       supportNote.classList.remove("fsb-d-none");
