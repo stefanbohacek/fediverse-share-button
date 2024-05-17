@@ -61,6 +61,8 @@ My sharing button [detects the software](https://github.com/stefanbohacek/fedive
 
 None at all. The [fediverse-info](https://github.com/stefanbohacek/fediverse-info) server is only needed to cache the software information for each domain as not to overwhelm the original server with too many requests.
 
+The last domain used is stored in the [site visitor's browser](https://en.wikipedia.org/wiki/Web_storage) so that when they view another page, or visit the site again later, this information can be reused.
+
 **Q: Are there any similar projects?**
 
 Yes, see a list here: https://github.com/Uden-AI/fediverse-share#similar-projects-to-compare-to, including this project itself.
