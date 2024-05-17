@@ -49,6 +49,36 @@ Note that if you need to change the path at which the `fediverse-share-button` f
 </form>
 ```
 
+## FAQ
+
+**Q: How does this work?**
+
+Some fediverse platforms let you [open a sharing prompt via a URL](https://stefanbohacek.com/blog/making-fediverse-apps-for-everyone/#sharing-dialog), much like many [corporate social media sites](https://stefanbohacek.com/blog/simple-sharing-buttons/#facebook).
+
+My sharing button [detects the software](https://github.com/stefanbohacek/fediverse-info) running on the platform based on the provided URL, and shows a matching fediverse logo (courtesy of [Liaizon Wakest](https://fediverse.wake.st/)).
+
+**Q: Does this button or the fediverse-info server collect any information?**
+
+None at all. The [fediverse-info](https://github.com/stefanbohacek/fediverse-info) server is only needed to cache the software information for each domain as not to overwhelm the original server with too many requests.
+
+**Q: Are there any similar projects?**
+
+Yes, see a list here: https://github.com/Uden-AI/fediverse-share#similar-projects-to-compare-to, including this project itself.
+
+**Q: Is this really free to use?**
+
+Yep. But if you do have any extra cash, see [stefanbohacek.com/support-my-work](https://stefanbohacek.com/support-my-work/).
+
+**Q: Any way I can share feedback and suggestions?**
+
+Yes, feel free to [open an issue](https://github.com/stefanbohacek/fediverse-share-button/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) on this repo, or find my contact information [on my website](https://stefanbohacek.com/contact/).
+
+## To-do
+
+- Add missing icons, see `icons/todo.txt`.
+- Better development workflow.
+- Localization.
+
 ## Development
 
 After making changes to the JS and CSS files, make sure to minify them.
@@ -59,12 +89,6 @@ npm install minify -g
 terser fediverse-share-button/script.js > fediverse-share-button/script.min.js
 minify fediverse-share-button/styles.css > fediverse-share-button/styles.min.css
 ```
-
-## To-do
-
-- Add missing icons, see `icons/todo.txt`.
-- Better development workflow.
-- Localization.
 
 ## Attributions
 
