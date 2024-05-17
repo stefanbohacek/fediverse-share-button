@@ -1,0 +1,6 @@
+- Calckey
+- Diaspora
+- Ecko
+- Groundpolis
+- Misty
+- XMPP
