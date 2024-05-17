@@ -143,6 +143,11 @@
     return encodeURIComponent(pageDescription);
   };
 
+  const getPageURL = () => encodeURIComponent(window.location.href);
+  const getDomain = (str) => str.replace(/(^\w+:|^)\/\//, "");
+  const truncate = (input) =>
+    input.length > 5 ? `${input.substring(0, 100)}...` : input;
+
   const getSelectedText = () => {
     // https://stackoverflow.com/a/5379408
 
@@ -153,11 +158,8 @@
       text = document.selection.createRange().text;
     }
     // return text.replace(/(\r\n|\n|\r)/gm, "");
-    return text;
+    return truncate(text);
   };
-
-  const getPageURL = () => encodeURIComponent(window.location.href);
-  const getDomain = (str) => str.replace(/(^\w+:|^)\/\//, "");
 
   // Main script.
 
@@ -192,10 +194,14 @@
         }`;
 
         if (domainInput?.dataset?.software) {
-          if (["diaspora", "friendica"].includes(domainInput.dataset.software)) {
+          if (
+            ["diaspora", "friendica"].includes(domainInput.dataset.software)
+          ) {
             shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
           } else if (domainInput.dataset.software === "threads") {
-            shareURL = `https://${domain}/intent/post?text=${shareText + "%0A%0A" + getPageURL()}`;
+            shareURL = `https://${domain}/intent/post?text=${
+              shareText + "%0A%0A" + getPageURL()
+            }`;
           }
         }
 
