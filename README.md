@@ -60,6 +60,7 @@ minify fediverse-share-button/styles.css > fediverse-share-button/styles.min.css
 
 ## To-do
 
+- Add missing icons, see `icons/todo.txt`.
 - Better development workflow.
 - Localization.
 
