@@ -33,11 +33,10 @@ Note that if you need to change the path at which the `fediverse-share-button` f
       type="text"
       name="fediverse-domain"
       placeholder="mastodon.social"
-      class="fsb-input fsb-domain form-control"
+      class="fsb-input fsb-domain"
       aria-label="Amount (to the nearest dollar)">
     <button class="fsb-button"
-      type="submit"
-      id="button-addon2"><img src="./fediverse-share-button/icons/mastodon.svg"
+      type="submit"><img src="./fediverse-share-button/icons/mastodon.svg"
         class="fsb-icon"></span>Share</button>
   </div>
   <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit <a

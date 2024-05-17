@@ -9,9 +9,9 @@
 }
 
 .fsb-icon {
-  max-width: 14px;
-  margin-right: 10px;
-  vertical-align: text-top;
+  max-width: 1rem;
+  margin-right: 0.5rem;
+  vertical-align: baseline;
 }
 
 .fsb-support-note{
@@ -86,7 +86,7 @@
   text-decoration: none;
   vertical-align: middle;
   border: 1px solid silver;
-  border-radius: 8px;
+  border-radius: 8px !important;
   cursor: pointer;
   position: relative;
   z-index: 2;
