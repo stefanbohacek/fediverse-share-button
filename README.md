@@ -71,6 +71,8 @@ Yep. But if you do have any extra cash, see [stefanbohacek.com/support-my-work](
 
 Yes, feel free to [open an issue](https://github.com/stefanbohacek/fediverse-share-button/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) on this repo, or find my contact information [on my website](https://stefanbohacek.com/contact/).
 
+See also the [To-do](#to-do) section below for planned features and changes.
+
 
 ## Tutorials
 
