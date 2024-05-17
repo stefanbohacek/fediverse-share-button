@@ -68,8 +68,8 @@ minify fediverse-share-button/styles.css > fediverse-share-button/styles.min.css
 
 ### Icons
 
-- fediverse.wake.st
-- flowbite.com/icons
+- [fediverse.wake.st](https://fediverse.wake.st)
+- [flowbite.com/icons](https://flowbite.com/icons)
 
 ### JS and CSS code
 
