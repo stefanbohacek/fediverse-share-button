@@ -93,8 +93,10 @@
   };
 
   const doneTyping = async (el) => {
+    const shareBtn = el.parentElement.getElementsByClassName("fsb-button")[0];
     const domain = getDomain(el.value);
 
+    shareBtn.disabled = true;
     const resp = await fetch(
       `https://fediverse-info.stefanbohacek.dev/node-info?domain=${domain}`
     );
@@ -110,6 +112,7 @@
     } else {
       updateTheIcon(iconEl, "question");
     }
+    shareBtn.disabled = false;
   };
 
   const getPageTitle = () => {
