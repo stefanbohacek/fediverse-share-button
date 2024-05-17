@@ -23,7 +23,7 @@ You can see a demo at [fediverse-share-button.stefanbohacek.dev](https://fediver
 <script src="./fediverse-share-button/script.min.js" defer class="fsb-script"></script>
 ```
 
-Note that if you need to change the path at which the `fediverse-share-button` folder is uploaded
+Note that if you need to change where the `fediverse-share-button` folder is uploaded, you will also have to change the JS and CSS paths above, and also the path of the initial Mastodon logo below.
 
 3. Add a sharing prompt to your page.
 
