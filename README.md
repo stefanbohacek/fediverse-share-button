@@ -17,7 +17,7 @@ Let your site's visitors share your work with the fediverse!
 
 ```html
 <link rel="stylesheet" href="./fediverse-share-button/styles.min.css">
-<script src="./fediverse-share-button/script.min.js" defer class="fsb-script">
+<script src="./fediverse-share-button/script.min.js" defer class="fsb-script"></script>
 ```
 
 Note that if you need to change the path at which the `fediverse-share-button` folder is uploaded
