@@ -27,15 +27,15 @@ Note that if you need to change the path at which the `fediverse-share-button` f
 ```html
 <form class="fsb-prompt">
   <label>Share with the fediverse</label>
-  <div class="input-group mb-3">
-    <span class="input-group-text">https://</span>
+  <div class="fsb-input-group mb-3">
+    <span class="fsb-input-group-text">https://</span>
     <input required
       type="text"
       name="fediverse-domain"
       placeholder="mastodon.social"
-      class="fsb-domain form-control"
+      class="fsb-input fsb-domain form-control"
       aria-label="Amount (to the nearest dollar)">
-    <button class="fsb-btn btn btn-outline-secondary"
+    <button class="fsb-button"
       type="submit"
       id="button-addon2"><img src="./fediverse-share-button/icons/mastodon.svg"
         class="fsb-icon"></span>Share</button>
