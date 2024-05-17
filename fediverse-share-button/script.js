@@ -156,8 +156,7 @@
     return text;
   };
 
-  // const getPageURL = () => encodeURIComponent(window.location.href);
-  const getPageURL = () => window.location.href;
+  const getPageURL = () => encodeURIComponent(window.location.href);
   const getDomain = (str) => str.replace(/(^\w+:|^)\/\//, "");
 
   // Main script.
@@ -196,7 +195,7 @@
           if (["diaspora", "friendica"].includes(domainInput.dataset.software)) {
             shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
           } else if (domainInput.dataset.software === "threads") {
-            shareURL = `https://${domain}/intent/post?text=${shareText}`;
+            shareURL = `https://${domain}/intent/post?text=${shareText + "%0A%0A" + getPageURL()}`;
           }
         }
 
