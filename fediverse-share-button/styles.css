@@ -24,7 +24,7 @@
 
 /* Styles based on the work of the getbootstrap.com team and contributors. */
 
-.input-group {
+.fsb-input-group {
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -34,7 +34,7 @@
   margin-bottom: 1rem !important;
 }
 
-.input-group-text {
+.fsb-input-group-text {
   box-sizing: border-box;
   display: flex;
   align-items: center;
