@@ -61,6 +61,7 @@
       )[0];
 
     iconElement.src = `${getFSBPath()}/icons/${software}.svg`;
+    iconElement.alt = `${software} platform logo`;
 
     supportNote.classList.add("fsb-d-none");
 
