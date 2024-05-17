@@ -1,7 +1,7 @@
 ![A screenshot of the fediverse sharing prompt, which consists of an input field for domain name and a button with the text "Share" preceded by a Mastodon logo](./images/fsb-640x120.png)
 # Fediverse Sharing Button
 
-Let your site's visitors share your work with the fediverse!
+Let your site's visitors share your work with the fediverse! For a list of supported platforms, [visit my blog](https://stefanbohacek.com/blog/making-fediverse-apps-for-everyone/#sharing-dialog).
 
 ## Features
 
