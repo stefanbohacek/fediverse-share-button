@@ -43,6 +43,8 @@ Add the following snippet to where you want your sharing button to show up:
 
 Alternatively, you can download the code from this repo and host all the JS, CSS, and image files yourself.
 
+For alternative uses of this project, see the [Tutorials](#tutorials) section.
+
 ## FAQ
 
 **Q: How does this work?**
@@ -68,6 +70,11 @@ Yep. But if you do have any extra cash, see [stefanbohacek.com/support-my-work](
 **Q: Any way I can share feedback and suggestions?**
 
 Yes, feel free to [open an issue](https://github.com/stefanbohacek/fediverse-share-button/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) on this repo, or find my contact information [on my website](https://stefanbohacek.com/contact/).
+
+
+## Tutorials
+
+- [Adding a Fediverse Share Button to my Emacs Nikola Blog](https://blog.notroot.online/posts/adding-a-fediverse-share-button-to-my-emacs-nikola-blog/) by [Notroot](https://notroot.online/@notroot)
 
 ## To-do
 
