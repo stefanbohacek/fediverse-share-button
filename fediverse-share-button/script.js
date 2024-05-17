@@ -156,7 +156,8 @@
     return text;
   };
 
-  const getPageURL = () => encodeURIComponent(window.location.href);
+  // const getPageURL = () => encodeURIComponent(window.location.href);
+  const getPageURL = () => window.location.href;
   const getDomain = (str) => str.replace(/(^\w+:|^)\/\//, "");
 
   // Main script.
