@@ -22,6 +22,7 @@
     "pleroma",
     "sharkey",
     "socialhome",
+    "threads",
     "xmpp",
     "zap",
   ];
@@ -35,6 +36,7 @@
     "mastodon",
     "misskey",
     "sharkey",
+    "threads",
   ];
 
   // Helper functions.
@@ -65,7 +67,11 @@
 
     supportNote.classList.add("fsb-d-none");
 
-    if (domainInput.value && domainInput.value.trim().length > 0 && !supportedSoftware.includes(software)){
+    if (
+      domainInput.value &&
+      domainInput.value.trim().length > 0 &&
+      !supportedSoftware.includes(software)
+    ) {
       supportNoteLink.href = `https:\\${domainInput.value}`;
       supportNoteLink.innerHTML = domainInput.value;
       supportNote.classList.remove("fsb-d-none");
@@ -184,6 +190,8 @@
         if (domainInput?.dataset?.software) {
           if (domainInput.dataset.software === "diaspora") {
             shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
+          } else if (domainInput.dataset.software === "threads") {
+            shareURL = `https://${domain}/intent/post?text=${shareText}`;
           }
         }
 
