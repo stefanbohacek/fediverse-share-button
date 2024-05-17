@@ -86,11 +86,12 @@
   text-decoration: none;
   vertical-align: middle;
   border: 1px solid silver;
-  border-radius: 8px !important;
   cursor: pointer;
   position: relative;
   z-index: 2;
   margin-left: -1;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
