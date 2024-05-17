@@ -29,8 +29,9 @@
 
   const supportedSoftware = [
     "diaspora",
-    "glitch-soc",
     "firefish",
+    "friendica",
+    "glitch-soc",
     "hometown",
     "lemmy",
     "mastodon",
@@ -188,7 +189,7 @@
         }`;
 
         if (domainInput?.dataset?.software) {
-          if (domainInput.dataset.software === "diaspora") {
+          if (["diaspora", "friendica"].includes(domainInput.dataset.software)) {
             shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
           } else if (domainInput.dataset.software === "threads") {
             shareURL = `https://${domain}/intent/post?text=${shareText}`;
