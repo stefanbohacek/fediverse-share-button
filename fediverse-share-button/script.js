@@ -20,6 +20,7 @@
     "misty",
     "osada",
     "pleroma",
+    "sharkey",
     "socialhome",
     "xmpp",
     "zap",
@@ -33,6 +34,7 @@
     "lemmy",
     "mastodon",
     "misskey",
+    "sharkey",
   ];
 
   // Helper functions.

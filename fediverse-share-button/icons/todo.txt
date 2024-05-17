@@ -3,4 +3,5 @@
 - Ecko
 - Groundpolis
 - Misty
+- Sharkey
 - XMPP
