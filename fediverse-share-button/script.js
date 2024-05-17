@@ -146,7 +146,7 @@
   const getPageURL = () => encodeURIComponent(window.location.href);
   const getDomain = (str) => str.replace(/(^\w+:|^)\/\//, "");
   const truncate = (input) =>
-    input.length > 5 ? `${input.substring(0, 100)}...` : input;
+    input.length > 5 ? `${input.substring(0, 300)}...` : input;
 
   const getSelectedText = () => {
     // https://stackoverflow.com/a/5379408
