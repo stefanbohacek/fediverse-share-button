@@ -15,17 +15,7 @@ You can see a demo at [fediverse-share-button.stefanbohacek.dev](https://fediver
 
 ## How to use
 
-1. Download the files in this repo.
-2. Add the JavaScript code and CSS stylesheet to your page.
-
-```html
-<link rel="stylesheet" href="./fediverse-share-button/styles.min.css">
-<script src="./fediverse-share-button/script.min.js" defer class="fsb-script"></script>
-```
-
-Note that if you need to change where the `fediverse-share-button` folder is uploaded, you will also have to change the JS and CSS paths above, and also the path of the initial Mastodon logo below.
-
-3. Add a sharing prompt to your page.
+Add the following snippet to where you want your sharing button to show up:
 
 ```html
 <form class="fsb-prompt">
@@ -47,7 +37,11 @@ Note that if you need to change where the `fediverse-share-button` folder is upl
       target="_blank"
       href=""></a>.</p>
 </form>
+<link rel="stylesheet" href="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/styles.min.css">
+<script src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/script.min.js" defer class="fsb-script"></script>
 ```
+
+Alternatively, you can download the code from this repo and host all the JS, CSS, and image files yourself.
 
 ## FAQ
 
