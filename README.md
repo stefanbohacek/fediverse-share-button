@@ -52,8 +52,9 @@ Note that if you need to change the path at which the `fediverse-share-button` f
 After making changes to the JS and CSS files, make sure to minify them.
 
 ```sh
-npm i minify -g
-minify fediverse-share-button/script.js > fediverse-share-button/script.min.js
+npm install terser -g
+npm install minify -g
+terser fediverse-share-button/script.js > fediverse-share-button/script.min.js
 minify fediverse-share-button/styles.css > fediverse-share-button/styles.min.css
 ```
 
