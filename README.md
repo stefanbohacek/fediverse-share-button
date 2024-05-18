@@ -57,7 +57,7 @@ My sharing button [detects the software](https://github.com/stefanbohacek/fedive
 
 None at all. The [fediverse-info](https://github.com/stefanbohacek/fediverse-info) server is only needed to cache the software information for each domain as not to overwhelm the original server with too many requests.
 
-The last domain used is stored in the [site visitor's browser](https://en.wikipedia.org/wiki/Web_storage) so that when they view another page, or visit the site again later, this information can be reused.
+The last domain used in the domain input field and the fediverse software it's running are both stored in the [site visitor's browser](https://en.wikipedia.org/wiki/Web_storage) so that when they view another page, or visit the site again later, this information can be reused.
 
 **Q: Are there any similar projects?**
 
