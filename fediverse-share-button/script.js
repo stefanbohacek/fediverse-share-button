@@ -107,6 +107,10 @@
 
     el.dataset.software = software;
 
+    if (software) {
+      localStorage.setItem("fsb-software", software);
+    }
+
     if (software && knownSoftware.includes(software)) {
       updateTheIcon(iconEl, software);
     } else {
@@ -166,13 +170,23 @@
   let typingTimer;
   const doneTypingInterval = 1300;
   const savedDomain = localStorage.getItem("fsb-domain");
+  const savedSoftware = localStorage.getItem("fsb-software");
 
   [...document.getElementsByClassName("fsb-prompt")].forEach((fsbPrompt) => {
     const domainInput = fsbPrompt.getElementsByClassName("fsb-domain")[0];
 
     if (savedDomain) {
       domainInput.value = savedDomain;
-      updateIcon(domainInput);
+
+      if (savedSoftware) {
+        domainInput.dataset.software = savedSoftware;
+
+        const iconEl =
+          domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
+        updateTheIcon(iconEl, savedSoftware);
+      } else {
+        updateIcon(domainInput);
+      }
     }
 
     domainInput.addEventListener("input", () => {
