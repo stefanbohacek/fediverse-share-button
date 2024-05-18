@@ -27,7 +27,7 @@ Add the following snippet to where you want your sharing button to show up:
       name="fediverse-domain"
       placeholder="mastodon.social"
       class="fsb-input fsb-domain"
-      aria-label="Amount (to the nearest dollar)">
+      aria-label="Server domain">
     <button class="fsb-button"
       type="submit"><img src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/icons/mastodon.svg"
         class="fsb-icon"></span>Share</button>
