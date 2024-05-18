@@ -174,6 +174,7 @@
 
   [...document.getElementsByClassName("fsb-prompt")].forEach((fsbPrompt) => {
     const domainInput = fsbPrompt.getElementsByClassName("fsb-domain")[0];
+    const shareBtn = fsbPrompt.getElementsByClassName("fsb-button")[0];
 
     if (savedDomain) {
       domainInput.value = savedDomain;
@@ -191,6 +192,10 @@
 
     domainInput.addEventListener("input", () => {
       updateIcon(domainInput);
+    });
+
+    domainInput.addEventListener("change", () => {
+      shareBtn.disabled = true;
     });
 
     fsbPrompt.addEventListener("submit", (ev) => {
