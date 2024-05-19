@@ -73,7 +73,7 @@
       domainInput.value.trim().length > 0 &&
       !supportedSoftware.includes(software)
     ) {
-      supportNoteLink.href = `https:\\${domainInput.value}`;
+      supportNoteLink.href = `https://${domainInput.value}`;
       supportNoteLink.innerHTML = domainInput.value;
       supportNote.classList.remove("fsb-d-none");
     }
