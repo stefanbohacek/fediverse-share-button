@@ -73,7 +73,7 @@ input.fsb-input {
   min-width: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  margin-left: -1px;
+  margin-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -92,7 +92,7 @@ button.fsb-button {
   cursor: pointer;
   position: relative;
   z-index: 2;
-  margin-left: -1;
+  margin-left: -1px;
   border-top-right-radius: 8px !important;
   border-bottom-right-radius: 8px !important;
   border-top-left-radius: 0 !important;
