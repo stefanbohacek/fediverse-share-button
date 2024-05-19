@@ -11,7 +11,7 @@
 .fsb-icon {
   max-width: 1rem;
   margin-right: 0.5rem;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
 }
 
 .fsb-support-note{
