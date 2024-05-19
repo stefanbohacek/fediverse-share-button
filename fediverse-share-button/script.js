@@ -224,7 +224,9 @@
           }
         }
 
-        window.open(shareURL);
+        // window.open(shareURL);
+        // Doesn't work on iOS https://stackoverflow.com/questions/20696041/window-openurl-blank-not-working-on-imac-safari
+        window.location.assign(shareURL);
       }
     });
   });
