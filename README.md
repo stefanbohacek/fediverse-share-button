@@ -84,6 +84,7 @@ See also the [To-do](#to-do) section below for planned features and changes.
 
 ## To-do
 
+- Make a WordPress plugin version.
 - Add missing icons, see `icons/todo.txt`.
 - Better development workflow.
 - Localization.
