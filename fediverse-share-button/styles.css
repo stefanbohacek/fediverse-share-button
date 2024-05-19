@@ -52,6 +52,7 @@
 }
 
 input.fsb-input {
+  background-color: #fff;
   box-sizing: border-box;
   margin: 0;
   font-family: inherit;
