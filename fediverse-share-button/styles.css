@@ -44,7 +44,7 @@
   line-height: 1.5;
   text-align: center;
   white-space: nowrap;
-  background-color: var(--bs-tertiary-bg);
+  background-color: #fff;
   border: 1px solid silver;
   border-radius: 8px;
   border-top-right-radius: 0;
@@ -72,7 +72,7 @@ input.fsb-input {
   min-width: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  margin-left: calc(var(--bs-border-width) * -1);
+  margin-left: -1;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
