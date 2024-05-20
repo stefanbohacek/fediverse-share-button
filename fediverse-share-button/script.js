@@ -195,7 +195,7 @@
     });
 
     domainInput.addEventListener("change", () => {
-      shareBtn.disabled = true;
+      // shareBtn.disabled = true;
     });
 
     fsbPrompt.addEventListener("submit", (ev) => {
