@@ -1,9 +1,9 @@
-.fsb-prompt{
+.fsb-prompt {
   max-width: 500px;
   margin-top: 52px;
 }
 
-.fsb-prompt label{
+.fsb-prompt label {
   display: block;
   margin-bottom: 12px;
 }
@@ -14,11 +14,11 @@
   vertical-align: text-bottom;
 }
 
-.fsb-support-note{
+.fsb-support-note {
   font-size: small;
 }
 
-.fsb-d-none{
+.fsb-d-none {
   display: none !important;
 }
 
@@ -54,6 +54,7 @@
 
 input.fsb-input {
   background-color: #fff;
+  color: #3e3e3e;
   box-sizing: border-box;
   margin: 0;
   font-family: inherit;
@@ -78,8 +79,6 @@ input.fsb-input {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-
-
 
 input.fsb-input ::placeholder,
 input.fsb-input ::-webkit-input-placeholder,
