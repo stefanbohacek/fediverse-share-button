@@ -19,7 +19,7 @@ Add the following snippet to where you want your sharing button to show up:
 
 ```html
 <form class="fsb-prompt">
-  <label>Share with the fediverse</label>
+  <label>Share this page from your fediverse server</label>
   <div class="fsb-input-group mb-3">
     <span class="fsb-input-group-text">https://</span>
     <input required
