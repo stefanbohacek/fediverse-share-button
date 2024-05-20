@@ -66,6 +66,7 @@ Yes, see a list here: https://github.com/Uden-AI/fediverse-share#similar-project
 Additional projects include:
 
 - [ShareOpenly](https://shareopenly.org/) by [Ben Werdmuller](https://about.werd.io/)
+- [Mastodon Share](https://mastodonshare.com/) by [Alex Barredo](https://mastodon.social/@barredo)
 
 **Q: Is this really free to use?**
 
