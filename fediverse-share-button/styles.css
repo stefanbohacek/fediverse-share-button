@@ -79,6 +79,14 @@ input.fsb-input {
   border-bottom-left-radius: 0;
 }
 
+
+
+input.fsb-input ::placeholder,
+input.fsb-input ::-ms-input-placeholder {
+  color: #3e3e3e;
+  opacity: 1;
+}
+
 button.fsb-button {
   box-sizing: border-box;
   background-color: #fff;
