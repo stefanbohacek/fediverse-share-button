@@ -61,7 +61,7 @@ The last domain used in the domain input field and the fediverse software it's r
 
 **Q: Are there any similar projects?**
 
-Yes, see a list here: https://github.com/Uden-AI/fediverse-share#similar-projects-to-compare-to, including this project itself.
+Yes, see a list here: https://github.com/Uden-AI/fediverse-share#similar-projects-to-compare-to, including the [fediverse-share](https://github.com/Uden-AI/fediverse-share) project itself.
 
 Additional projects include:
 
