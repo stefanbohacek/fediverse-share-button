@@ -91,6 +91,7 @@ button.fsb-button {
   box-sizing: border-box;
   background-color: #fff;
   color: #000;
+  line-height: 1rem;
   margin: 0;
   display: inline-block;
   padding: 6px 12px;
