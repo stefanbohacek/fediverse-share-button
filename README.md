@@ -70,7 +70,7 @@ Additional projects include:
 
 ### Q: Is this really free to use?
 
-Yep. But if you do have any extra cash, see [stefanbohacek.com/support-my-work](https://stefanbohacek.com/support-my-work/).
+Yep. Attribution and/or link back to the project would be nice, but are not required. And if you have any extra cash, see [stefanbohacek.com/support-my-work](https://stefanbohacek.com/support-my-work/).
 
 ### Q: Any way I can share feedback and suggestions?
 
