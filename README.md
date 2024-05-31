@@ -76,19 +76,11 @@ Yep. But if you do have any extra cash, see [stefanbohacek.com/support-my-work](
 
 Yes, feel free to [open an issue](https://github.com/stefanbohacek/fediverse-share-button/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) on this repo, or find my contact information [on my website](https://stefanbohacek.com/contact/).
 
-See also the [To-do](#to-do) section below for planned features and changes.
-
+See also the [#enhancement](https://github.com/stefanbohacek/fediverse-share-button/issues?q=is%3Aopen+label%3Aenhancement+sort%3Aupdated-desc) tickets for planned features and changes.
 
 ## Tutorials
 
 - [Adding a Fediverse Share Button to my Emacs Nikola Blog](https://blog.notroot.online/posts/adding-a-fediverse-share-button-to-my-emacs-nikola-blog/) by [Notroot](https://notroot.online/@notroot)
-
-## To-do
-
-- Make a WordPress plugin version.
-- Add missing icons, see `icons/todo.txt`.
-- Better development workflow.
-- Localization.
 
 ## Development
 
