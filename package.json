@@ -1,0 +1,12 @@
+{
+  "name": "fediverse-share-button",
+  "version": "1.0.0",
+  "description": "Let your site's visitors share your work with the fediverse!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "terser fediverse-share-button/script.js > fediverse-share-button/script.min.js && minify fediverse-share-button/styles.css > fediverse-share-button/styles.min.css"
+  },
+  "author": "Stefan Bohacek",
+  "license": "MIT"
+}

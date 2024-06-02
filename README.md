@@ -89,8 +89,7 @@ After making changes to the JS and CSS files, make sure to minify them.
 ```sh
 npm install terser -g
 npm install minify -g
-terser fediverse-share-button/script.js > fediverse-share-button/script.min.js
-minify fediverse-share-button/styles.css > fediverse-share-button/styles.min.css
+npm run build
 ```
 
 ## Attributions
