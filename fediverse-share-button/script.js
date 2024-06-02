@@ -88,7 +88,7 @@
     } else {
       const iconEl =
         domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
-      updateTheIcon(iconEl, "question");
+      updateTheIcon(iconEl, "mastodon");
     }
   };
 
@@ -113,8 +113,8 @@
 
     if (software && knownSoftware.includes(software)) {
       updateTheIcon(iconEl, software);
-    } else {
-      updateTheIcon(iconEl, "question");
+    // } else {
+    //   updateTheIcon(iconEl, "question");
     }
     shareBtn.disabled = false;
   };
