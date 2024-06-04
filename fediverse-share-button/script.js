@@ -33,6 +33,7 @@
     "friendica",
     "glitch-soc",
     "hometown",
+    "hubzilla",
     "lemmy",
     "mastodon",
     "misskey",
@@ -113,8 +114,8 @@
 
     if (software && knownSoftware.includes(software)) {
       updateTheIcon(iconEl, software);
-    // } else {
-    //   updateTheIcon(iconEl, "question");
+      // } else {
+      //   updateTheIcon(iconEl, "question");
     }
     shareBtn.disabled = false;
   };
@@ -217,6 +218,8 @@
             ["diaspora", "friendica"].includes(domainInput.dataset.software)
           ) {
             shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
+          } else if (domainInput.dataset.software === "hubzilla") {
+            shareURL = `https://${domain}/rpost?url=${getPageURL()}&body=${shareText}`;
           } else if (domainInput.dataset.software === "threads") {
             shareURL = `https://${domain}/intent/post?text=${
               shareText + "%0A%0A" + getPageURL()
