@@ -219,7 +219,7 @@
           ) {
             shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
           } else if (domainInput.dataset.software === "hubzilla") {
-            shareURL = `https://${domain}/rpost?url=${getPageURL()}&body=${shareText}`;
+            shareURL = `https://${domain}/rpost?url=${getPageURL()}&body=${shareText}[br][br]`;
           } else if (domainInput.dataset.software === "threads") {
             shareURL = `https://${domain}/intent/post?text=${
               shareText + "%0A%0A" + getPageURL()
