@@ -53,6 +53,21 @@ Some fediverse platforms let you [open a sharing prompt via a URL](https://stefa
 
 My sharing button [detects the software](https://github.com/stefanbohacek/fediverse-info) running on the platform based on the provided URL, and shows a matching fediverse logo (courtesy of [Liaizon Wakest](https://fediverse.wake.st/)).
 
+### Q: Which platforms are supported?
+
+- Diaspora
+- Firefish
+- Friendica
+- Glitch-soc
+- Hometown
+- Hubzilla
+- Lemmy
+- Mastodon
+- Misskey
+- Sharkey
+
+Threads are *technically* supported, but they don't currently provide software information, so the URL won't be recognized.
+
 ### Q: Does this button or the fediverse-info server collect any information?
 
 None at all. The [fediverse-info](https://github.com/stefanbohacek/fediverse-info) server is only needed to cache the software information for each domain as not to overwhelm the original server with too many requests.
