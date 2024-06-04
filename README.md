@@ -3,7 +3,7 @@
 
 Let your site's visitors share your work with the fediverse!
 
-You can see a demo at [fediverse-share-button.stefanbohacek.dev](https://fediverse-share-button.stefanbohacek.dev/). For a list of supported platforms, [visit my blog](https://stefanbohacek.com/blog/making-fediverse-apps-for-everyone/#sharing-dialog).
+You can see a demo at [fediverse-share-button.stefanbohacek.dev](https://fediverse-share-button.stefanbohacek.dev/). For a list of supported platforms, [read below](#q-which-platforms-are-supported).
 
 ## Features
 
