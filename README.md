@@ -30,7 +30,7 @@ Add the following snippet to where you want your sharing button to show up:
       aria-label="Server domain">
     <button class="fsb-button"
       type="submit"><img src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/icons/mastodon.svg"
-        class="fsb-icon"></span>Share</button>
+        class="fsb-icon">Share</button>
   </div>
   <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit <a
       class="fsb-support-note-link"
