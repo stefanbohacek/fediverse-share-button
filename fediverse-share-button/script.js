@@ -23,6 +23,7 @@
     "sharkey",
     "socialhome",
     "threads",
+    "wordpress",
     "xmpp",
     "zap",
   ];
