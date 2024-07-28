@@ -19,6 +19,7 @@
     "misskey",
     "misty",
     "osada",
+    "pixelfed",
     "pleroma",
     "sharkey",
     "socialhome",
