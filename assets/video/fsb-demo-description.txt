@@ -1,0 +1,5 @@
+A short recording of me using the fediverse sharing button, filling out various fediverse domain names, showing how the icon changes to match the software running on each server.
+
+The interface itself consists of an input field for the domain name and a share button preceded by an icon.
+
+An "https" placeholder text is before the input field to signal that this part of the URL is not needed.
