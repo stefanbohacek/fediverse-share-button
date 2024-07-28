@@ -19,6 +19,7 @@
     "misskey",
     "misty",
     "osada",
+    "peertube",
     "pixelfed",
     "pleroma",
     "sharkey",
