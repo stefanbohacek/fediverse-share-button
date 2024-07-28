@@ -116,8 +116,8 @@
 
     if (software && knownSoftware.includes(software)) {
       updateTheIcon(iconEl, software);
-      // } else {
-      //   updateTheIcon(iconEl, "question");
+    } else {
+      updateTheIcon(iconEl, "question");
     }
     shareBtn.disabled = false;
   };
