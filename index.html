@@ -1,39 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+  class="h-100"
+  data-bs-theme="auto">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
-  <title>The Conquest of Bread by Petr Alekseevich Kropotkin</title>
+  <title>Fediverse Sharing Button</title>
   <meta name="description"
     content="One of the current objections to Communism, and Socialism altogether, is that the idea is so old, and yet it has never been realized.">
+  <link rel="stylesheet"
+    href="./assets/libs/bootstrap/5.3.3/css/bootstrap.min.css">
   <link rel="stylesheet"
     href="./fediverse-share-button/styles.min.css">
   <style>
     /* Demo page styles, not needed for the share button. */
-    body {
-      padding: 20px 24px;
-      font-family: sans-serif;
-      line-height: 1.2rem
-    }
-
-    header {
-      margin-bottom: 32px;
-    }
-
-    header,
-    article {
-      color: #4a4a4a;
-    }
-
-    .note {
-      background-color: #efefef;
-      padding: 14px;
-      border-radius: 10px;
-      margin-bottom: 32px;
-      font-weight: bold;
-    }
 
     .explainer {
       font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
@@ -45,73 +27,62 @@
       margin-top: 2rem;
       margin-bottom: 2rem;
     }
-
-    .fsb-prompt {
-      margin-top: 0 !important;
-    }
   </style>
 </head>
 
-<body>
-  <div class="note">This is a demo of the <a
-      href="https://stefanbohacek.com/project/fediverse-sharing-button/">Fediverse
-      Share Button</a> project. Try it out at the bottom of
-    this page.</div>
-  <header>
-    <h1>The Conquest of Bread</h1>
-    <p>by <a href="https://www.gutenberg.org/ebooks/23428">Petr Alekseevich Kropotkin</a></p>
-  </header>
-  <article style="max-width: 900px;">
-    <p>One of the current objections to Communism, and Socialism altogether, is that the idea is so old, and yet it has
-      never been realized. Schemes of ideal States haunted the thinkers of Ancient Greece; later on, the early
-      Christians joined in communist groups; centuries later, large communist brotherhoods came into existence during
-      the Reform movement. Then, the same ideals were revived during the great English and French Revolutions; and
-      finally, quite lately, in 1848, a revolution, inspired to a great extent with Socialist ideals, took place in
-      France. "And yet, you see," we are told, "how far away is still the realization of your schemes. Don't you think
-      that there is some fundamental error in your understanding of human nature and its needs?"</p>
-    <p>At first sight this objection seems very serious. However, the moment we consider human history more attentively,
-      it loses its strength. We see, first, that hundreds of millions of men have succeeded in maintaining amongst
-      themselves, in their village communities, for many hundreds of years, one of the main elements of Socialism—the
-      common ownership of the chief instrument of production, the land, and the apportionment of the same according to
-      the labour capacities of the different families; and we learn that if the communal possession of the land has been
-      destroyed in Western Europe, it was not from within, but from without, by the governments which created a land
-      monopoly in favour of the nobility and the middle classes. We learn, moreover, that the medieval cities succeeded
-      in maintaining in their midst, for several centuries in succession, a certain socialized organization of
-      production and trade; that these centuries were periods of a rapid intellectual, industrial, and artistic
-      progress; while the decay of these communal institutions came mainly from the incapacity of men of combining the
-      village with the city, the peasant with the citizen, so as jointly to oppose the growth of the military states,
-      which destroyed the free cities.</p>
+<body class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+    <div class="container">
+      <h1 class="mt-5 fw-bold">Fediverse Sharing Button</h1>
+      <p class="lead">Make it easy to share your website or a blog with the fediverse</p>
+      <ul class="mt-4">
+        <li>Minimalist design with no pop-ups</li>
+        <li>Remembers the last fediverse domain used</li>
+        <li>Supports several fediverse platform (<a
+            href="https://github.com/stefanbohacek/fediverse-share-button/#q-which-platforms-are-supported">see full
+            list</a>) and shows a matching logo</li>
+        <li>Open-source</li>
+      </ul>
+      <p class="explainer d-block mt-5 mb-3">Try it here ⤵</p>
+      <form class="fsb-prompt mt-0">
+        <label>Share this page from your fediverse server</label>
+        <div class="fsb-input-group mb-3">
+          <span class="fsb-input-group-text">https://</span>
+          <input required
+            type="text"
+            name="fediverse-domain"
+            placeholder="mastodon.social"
+            class="fsb-input fsb-domain"
+            aria-label="Server domain">
+          <button class="fsb-button"
+            type="submit"><img alt="Fediverse platform logo"
+              src="./fediverse-share-button/icons/mastodon.svg"
+              class="fsb-icon"></span>Share</button>
+        </div>
+        <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit <a
+            class="fsb-support-note-link"
+            target="_blank"
+            href=""></a>.</p>
+      </form>
 
-    <p>The history of mankind, thus understood, does not offer, then, an argument against Communism. It appears, on the
-      contrary, as a succession of endeavours to realize some sort of communist organization, endeavours which were
-      crowned here and there with a partial success of a certain duration; and all we are authorized to conclude is,
-      that mankind has not yet found the proper form for combining, on communistic principles, agriculture with a
-      suddenly developed industry and a rapidly growing international trade. The latter appears especially as a
-      disturbing element, since it is no longer individuals only, or cities, that enrich themselves by distant commerce
-      and export; but whole nations grow rich at the cost of those nations which lag behind in their industrial
-      development.</p>
-  </article>
-  <p class="explainer d-block mt-4 mb-3">Try it here ⤵</p>
-  <form class="fsb-prompt">
-    <label>Share this page from your fediverse server</label>
-    <div class="fsb-input-group mb-3">
-      <span class="fsb-input-group-text">https://</span>
-      <input required
-        type="text"
-        name="fediverse-domain"
-        placeholder="mastodon.social"
-        class="fsb-input fsb-domain"
-        aria-label="Server domain">
-      <button class="fsb-button"
-        type="submit"><img alt="Fediverse platform logo"
-          src="./fediverse-share-button/icons/mastodon.svg"
-          class="fsb-icon"></span>Share</button>
+      <p class="mt-5">
+        <a class="btn btn-dark"
+          href="https://github.com/stefanbohacek/fediverse-share-button/">Get the code</a>
+        <a class="btn btn-dark"
+          href="https://github.com/stefanbohacek/fediverse-share-button-wordpress/">Add to WordPress <sup>beta</sup></a>
+        <a class="btn btn-light"
+          href="https://stefanbohacek.com/project/fediverse-sharing-button/">Learn more</a>
+      </p>
     </div>
-    <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit <a
-        class="fsb-support-note-link"
-        target="_blank"
-        href=""></a>.</p>
-  </form>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="container">
+      <span class="text-body-secondary">Created by <a class="text-body-secondary"
+          href="https://stefanbohacek.com/">Stefan Bohacek</a>.</span>
+    </div>
+  </footer>
+
   <script class="fsb-script"
     src="./fediverse-share-button/script.min.js"
     defer>
