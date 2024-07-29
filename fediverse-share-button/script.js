@@ -1,7 +1,8 @@
 (async () => {
   // Privacy law compliance.
 
-  const canUseLocalStorage = localStorage.getItem("fsb-consent-given") !== "false" ? true : false;
+  const canUseLocalStorage =
+    localStorage.getItem("fsb-consent-given") !== "false" ? true : false;
 
   // List of suported fediverse software.
 
@@ -48,6 +49,10 @@
     "threads",
   ];
 
+  const notes = {
+    lemmy: `Older lemmy servers <a href="https://github.com/LemmyNet/lemmy-ui/issues/1913" target="_blank">may not work correctly</a>.`,
+  };
+
   // Helper functions.
 
   const getFSBPath = () => {
@@ -71,19 +76,28 @@
         "fsb-support-note-link"
       )[0];
 
+    const note =
+      iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
+        "fsb-note"
+      )[0];
+
     iconElement.src = `${getFSBPath()}/icons/${software}.svg`;
     iconElement.alt = `${software} platform logo`;
 
     supportNote.classList.add("fsb-d-none");
+    note.classList.add("fsb-d-none");
 
-    if (
-      domainInput.value &&
-      domainInput.value.trim().length > 0 &&
-      !supportedSoftware.includes(software)
-    ) {
-      supportNoteLink.href = `https://${domainInput.value}`;
-      supportNoteLink.innerHTML = domainInput.value;
-      supportNote.classList.remove("fsb-d-none");
+    if (domainInput.value && domainInput.value.trim().length > 0) {
+      if (!supportedSoftware.includes(software)) {
+        supportNoteLink.href = `https://${domainInput.value}`;
+        supportNoteLink.innerHTML = domainInput.value;
+        supportNote.classList.remove("fsb-d-none");
+      }
+
+      if (note && notes[software]) {
+        note.innerHTML = notes[software];
+        note.classList.remove("fsb-d-none");
+      }
     }
   };
 
@@ -177,8 +191,12 @@
 
   let typingTimer;
   const doneTypingInterval = 1300;
-  const savedDomain = canUseLocalStorage ? localStorage.getItem("fsb-domain") : false;
-  const savedSoftware = canUseLocalStorage ? localStorage.getItem("fsb-software") : false;
+  const savedDomain = canUseLocalStorage
+    ? localStorage.getItem("fsb-domain")
+    : false;
+  const savedSoftware = canUseLocalStorage
+    ? localStorage.getItem("fsb-software")
+    : false;
 
   [...document.getElementsByClassName("fsb-prompt")].forEach((fsbPrompt) => {
     const domainInput = fsbPrompt.getElementsByClassName("fsb-domain")[0];
@@ -213,7 +231,7 @@
       if (domain?.length) {
         const shareText = getSelectedText() || getPageTitle();
 
-        if (canUseLocalStorage){
+        if (canUseLocalStorage) {
           localStorage.setItem("fsb-domain", domain);
         }
 

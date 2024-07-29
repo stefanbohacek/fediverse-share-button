@@ -14,7 +14,8 @@
   vertical-align: text-bottom;
 }
 
-.fsb-support-note {
+.fsb-support-note,
+.fsb-note {
   font-size: small;
 }
 
