@@ -85,7 +85,10 @@
     iconElement.alt = `${software} platform logo`;
 
     supportNote.classList.add("fsb-d-none");
-    note.classList.add("fsb-d-none");
+
+    if (note){
+      note.classList.add("fsb-d-none");
+    }
 
     if (domainInput.value && domainInput.value.trim().length > 0) {
       if (!supportedSoftware.includes(software)) {
