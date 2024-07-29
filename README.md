@@ -61,7 +61,7 @@ My sharing button [detects the software](https://github.com/stefanbohacek/fedive
 - Glitch-soc
 - Hometown
 - Hubzilla
-- Lemmy
+- Lemmy (may be [broken on older versions](https://github.com/LemmyNet/lemmy-ui/issues/1913))
 - Mastodon
 - Misskey
 - Sharkey
