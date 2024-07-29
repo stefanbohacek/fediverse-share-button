@@ -1,4 +1,8 @@
 (async () => {
+  // Privacy law compliance.
+
+  const canUseLocalStorage = localStorage.getItem("fsb-consent-given") !== "false" ? true : false;
+
   // List of suported fediverse software.
 
   const knownSoftware = [
@@ -111,7 +115,7 @@
 
     el.dataset.software = software;
 
-    if (software) {
+    if (software && canUseLocalStorage) {
       localStorage.setItem("fsb-software", software);
     }
 
@@ -173,8 +177,8 @@
 
   let typingTimer;
   const doneTypingInterval = 1300;
-  const savedDomain = localStorage.getItem("fsb-domain");
-  const savedSoftware = localStorage.getItem("fsb-software");
+  const savedDomain = canUseLocalStorage ? localStorage.getItem("fsb-domain") : false;
+  const savedSoftware = canUseLocalStorage ? localStorage.getItem("fsb-software") : false;
 
   [...document.getElementsByClassName("fsb-prompt")].forEach((fsbPrompt) => {
     const domainInput = fsbPrompt.getElementsByClassName("fsb-domain")[0];
@@ -209,7 +213,9 @@
       if (domain?.length) {
         const shareText = getSelectedText() || getPageTitle();
 
-        localStorage.setItem("fsb-domain", domain);
+        if (canUseLocalStorage){
+          localStorage.setItem("fsb-domain", domain);
+        }
 
         let shareURL = `https://${domain}/share?text=${
           // getPageTitle() + " " + getPageURL()

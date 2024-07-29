@@ -68,11 +68,26 @@ My sharing button [detects the software](https://github.com/stefanbohacek/fedive
 
 Threads are *technically* supported, but they don't currently provide software information, so the URL won't be recognized.
 
-### Q: Does this button or the fediverse-info server collect any information?
+### Q: Does this widget or the fediverse-info server collect any information? Does it comply with data privacy laws? (eg GDPR)
 
-None at all. The [fediverse-info](https://github.com/stefanbohacek/fediverse-info) server is only needed to cache the software information for each domain as not to overwhelm the original server with too many requests.
+The sharing widget uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store two pieces of information:
 
-The last domain used in the domain input field and the fediverse software it's running are both stored in the [site visitor's browser](https://en.wikipedia.org/wiki/Web_storage) so that when they view another page, or visit the site again later, this information can be reused.
+- `fsb-domain`: used to store the last **domain name** used in the sharing widget (eg. "mastodon.social", "pixelfed.social", etc)
+- `fsb-software`: used to store the **software** used by the selected fediverse server (eg. "mastodon", "pixelfed")
+
+When stored, this information is used to prefill the widget form upon next visit.
+
+To prevent this information from being stored, you can set the value of `fsb-consent-given` to `"false"` before loading the main JavaScript file.
+
+```html
+<script>
+  localStorage.setItem("fsb-consent-given", "false");
+</script>
+```
+
+Using any other value, or the lack of presence of it, will be interpreted as a consent to store and retrieve the information detailed above. Please consult any applicable laws to determine whether consent is required for this functionality.
+
+The [fediverse-info](https://github.com/stefanbohacek/fediverse-info) server is only needed to cache the software information for each domain as not to overwhelm the original server with too many requests. This information is not tied specifically to your site's visitor.
 
 ### Q: Are there any similar projects?
 
