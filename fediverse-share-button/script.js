@@ -71,14 +71,21 @@
         "fsb-support-note"
       )[0];
 
+    let note =
+      iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
+        "fsb-note"
+      )[0];
+
+    if (!note) {
+      note = document.createElement("p");
+      note.classList.add("fsb-note");
+      note.classList.add("fsb-d-none");
+      supportNote.parentNode.insertBefore(note, supportNote.nextSibling);
+    }
+
     const supportNoteLink =
       iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
         "fsb-support-note-link"
-      )[0];
-
-    const note =
-      iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
-        "fsb-note"
       )[0];
 
     iconElement.src = `${getFSBPath()}/icons/${software}.svg`;
@@ -86,7 +93,7 @@
 
     supportNote.classList.add("fsb-d-none");
 
-    if (note){
+    if (note) {
       note.classList.add("fsb-d-none");
     }
 
