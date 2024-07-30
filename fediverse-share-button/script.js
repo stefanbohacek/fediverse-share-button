@@ -224,7 +224,7 @@
 
     shareBtn.disabled = true;
     const resp = await fetch(
-      `https://fediverse-info.stefanbohacek.dev/node-info?domain=${domain}`
+      `https://fediverse-info.stefanbohacek.dev/node-info?domain=${domain}&onlysoftware=true`
     );
 
     const respJSON = await resp.json();
