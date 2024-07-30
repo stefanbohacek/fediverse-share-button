@@ -233,8 +233,8 @@
 
     el.dataset.software = software;
 
-    if (software && canUseLocalStorage) {
-      localStorage.setItem("fsb-software", software);
+    if (software) {
+      window.fsbGlobalSoftware = software;
     }
 
     if (software && knownSoftware.includes(software)) {
@@ -337,6 +337,7 @@
 
         if (canUseLocalStorage) {
           localStorage.setItem("fsb-domain", domain);
+          localStorage.setItem("fsb-software", window.fsbGlobalSoftware);
         }
 
         let shareURL = `https://${domain}/share?text=${
