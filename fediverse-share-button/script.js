@@ -223,9 +223,12 @@
     const domain = getDomain(el.value);
 
     shareBtn.disabled = true;
+
     const resp = await fetch(
       `https://fediverse-info.stefanbohacek.dev/node-info?domain=${domain}&onlysoftware=true`
     );
+
+    shareBtn.innerHTML = shareBtn.innerHTML.replace("Loading", "Share");
 
     const respJSON = await resp.json();
     const software = respJSON?.software?.name;
@@ -321,6 +324,16 @@
     }
 
     domainInput.addEventListener("input", () => {
+      const iconEl =
+      domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
+
+      updateTheIcon(iconEl, "question");
+
+      if (domainInput.value){
+        shareBtn.innerHTML = shareBtn.innerHTML.replace("Share", "Loading");
+      } else {
+        shareBtn.innerHTML = shareBtn.innerHTML.replace("Loading", "Share");
+      }
       updateIcon(domainInput);
     });
 
