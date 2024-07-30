@@ -88,6 +88,10 @@ input.fsb-input ::-ms-input-placeholder {
   opacity: 1;
 }
 
+input.fsb-input.fsb-domain{
+  width: auto;
+}
+
 button.fsb-button {
   box-sizing: border-box;
   background-color: #fff;
