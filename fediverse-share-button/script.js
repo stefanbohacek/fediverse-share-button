@@ -26,6 +26,7 @@
     "chatter_net",
     "chirp",
     "communecter",
+    "diaspora",
     "discourse",
     "dolphin",
     "drupal",
@@ -139,6 +140,7 @@
     "lemmy",
     "mastodon",
     "misskey",
+    "pleroma",
     "sharkey",
     "threads",
   ];
@@ -192,7 +194,7 @@
     }
 
     if (domainInput.value && domainInput.value.trim().length > 0) {
-      if (!supportedSoftware.includes(software)) {
+      if (software !== "question" && !supportedSoftware.includes(software)) {
         supportNoteLink.href = `https://${domainInput.value}`;
         supportNoteLink.innerHTML = domainInput.value;
         supportNote.classList.remove("fsb-d-none");
@@ -242,10 +244,13 @@
 
     if (software && knownSoftware.includes(software)) {
       updateTheIcon(iconEl, software);
+
+      if (supportedSoftware.includes(software)) {
+        shareBtn.disabled = false;
+      }
     } else {
       updateTheIcon(iconEl, "question");
     }
-    shareBtn.disabled = false;
   };
 
   const getPageTitle = () => {
@@ -313,11 +318,16 @@
       domainInput.value = savedDomain;
 
       if (savedSoftware) {
+        shareBtn.disabled = true;
         domainInput.dataset.software = savedSoftware;
 
         const iconEl =
           domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
         updateTheIcon(iconEl, savedSoftware);
+
+        if (supportedSoftware.includes(savedSoftware)) {
+          shareBtn.disabled = false;
+        }
       } else {
         updateIcon(domainInput);
       }
@@ -325,20 +335,21 @@
 
     domainInput.addEventListener("input", () => {
       const iconEl =
-      domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
+        domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
 
       updateTheIcon(iconEl, "question");
 
-      if (domainInput.value){
+      if (domainInput.value) {
         shareBtn.innerHTML = shareBtn.innerHTML.replace("Share", "Loading");
       } else {
+        updateTheIcon(iconEl, "question");
         shareBtn.innerHTML = shareBtn.innerHTML.replace("Loading", "Share");
       }
       updateIcon(domainInput);
     });
 
     domainInput.addEventListener("change", () => {
-      // shareBtn.disabled = true;
+      shareBtn.disabled = true;
     });
 
     fsbPrompt.addEventListener("submit", (ev) => {
