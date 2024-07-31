@@ -224,8 +224,6 @@
     const shareBtn = el.parentElement.getElementsByClassName("fsb-button")[0];
     const domain = getDomain(el.value);
 
-    shareBtn.disabled = true;
-
     const resp = await fetch(
       `https://fediverse-info.stefanbohacek.dev/node-info?domain=${domain}&onlysoftware=true`
     );
@@ -318,8 +316,8 @@
       domainInput.value = savedDomain;
 
       if (savedSoftware) {
-        shareBtn.disabled = true;
         domainInput.dataset.software = savedSoftware;
+        shareBtn.disabled = true;
 
         const iconEl =
           domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
@@ -334,6 +332,7 @@
     }
 
     domainInput.addEventListener("input", () => {
+      shareBtn.disabled = true;      
       const iconEl =
         domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
 
@@ -349,7 +348,7 @@
     });
 
     domainInput.addEventListener("change", () => {
-      shareBtn.disabled = true;
+      // shareBtn.disabled = true;
     });
 
     fsbPrompt.addEventListener("submit", (ev) => {
@@ -361,7 +360,9 @@
 
         if (canUseLocalStorage) {
           localStorage.setItem("fsb-domain", domain);
-          localStorage.setItem("fsb-software", window.fsbGlobalSoftware);
+          if (window.fsbGlobalSoftware) {
+            // localStorage.setItem("fsb-software", window.fsbGlobalSoftware);
+          }
         }
 
         let shareURL = `https://${domain}/share?text=${
