@@ -309,7 +309,7 @@
     : false;
 
   if (savedSoftware) {
-    window.fsbGlobalSoftware = software;
+    window.fsbGlobalSoftware = savedSoftware;
   }
 
   [...document.getElementsByClassName("fsb-prompt")].forEach((fsbPrompt) => {
