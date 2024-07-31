@@ -1,6 +1,7 @@
 const { src, dest, watch, series, parallel } = require("gulp");
 
 const sass = require("gulp-sass")(require("sass"));
+const concat = require("gulp-concat");
 const terser = require("gulp-terser");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
@@ -13,28 +14,32 @@ const files = {
 };
 
 function scssTask() {
-  return src(files.scssPath, { sourcemaps: true })
+  return src(files.scssPath)
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(rename({
-      suffix: '.min'
-    }))    
-    .pipe(dest("fediverse-share-button", { sourcemaps: "." }));
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(dest("fediverse-share-button"));
 }
 
 function jsTask() {
-  return src(
-    [
-      files.jsPath,
-      //,'!' + 'includes/js/jquery.min.js',
-    ],
-    { sourcemaps: true }
-  )
-    .pipe(terser())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(dest("fediverse-share-button", { sourcemaps: "." }));
+  return (
+    src(
+      [
+        "fediverse-share-button/src/scripts/modules/*.js",
+        "fediverse-share-button/src/scripts/main.js"
+      ]
+    )
+      .pipe(terser())
+      .pipe(concat("script.js"))
+      .pipe(rename({
+        suffix: '.min'
+      }))      
+      .pipe(dest("fediverse-share-button"))
+  );
 }
 
 function watchJS() {
@@ -49,11 +54,6 @@ function watchCSS() {
   );
 }
 
-exports.default = series(
-  parallel(scssTask, jsTask)
-);
+exports.default = series(parallel(scssTask, jsTask));
 
-exports.watch = series(
-  parallel(scssTask, jsTask),
-  parallel(watchJS, watchCSS)
-);
+exports.watch = series(parallel(scssTask, jsTask), parallel(watchJS, watchCSS));
