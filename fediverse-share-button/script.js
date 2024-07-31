@@ -162,49 +162,9 @@
       iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
         "fsb-domain"
       )[0];
-    const supportNote =
-      iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
-        "fsb-support-note"
-      )[0];
-
-    let note =
-      iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
-        "fsb-note"
-      )[0];
-
-    if (!note) {
-      note = document.createElement("p");
-      note.classList.add("fsb-note");
-      note.classList.add("fsb-d-none");
-      supportNote.parentNode.insertBefore(note, supportNote.nextSibling);
-    }
-
-    const supportNoteLink =
-      iconElement.parentElement.parentElement.parentElement.getElementsByClassName(
-        "fsb-support-note-link"
-      )[0];
 
     iconElement.src = `${getFSBPath()}/icons/${software}.svg`;
     iconElement.alt = `${software} platform logo`;
-
-    supportNote.classList.add("fsb-d-none");
-
-    if (note) {
-      note.classList.add("fsb-d-none");
-    }
-
-    if (domainInput.value && domainInput.value.trim().length > 0) {
-      if (software !== "question" && !supportedSoftware.includes(software)) {
-        supportNoteLink.href = `https://${domainInput.value}`;
-        supportNoteLink.innerHTML = domainInput.value;
-        supportNote.classList.remove("fsb-d-none");
-      }
-
-      if (note && notes[software]) {
-        note.innerHTML = notes[software];
-        note.classList.remove("fsb-d-none");
-      }
-    }
   };
 
   const updateIcon = async (domainInput) => {
@@ -217,6 +177,61 @@
       const iconEl =
         domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
       updateTheIcon(iconEl, "mastodon");
+    }
+  };
+
+  const hidePlatformSupportVisibilityNote = (shareBtn) => {
+    const supportNote =
+      shareBtn.parentElement.parentElement.getElementsByClassName(
+        "fsb-support-note"
+      )[0];
+
+    supportNote.classList.add("fsb-d-none");
+  };
+
+  const checkPlatformSupport = (shareBtn) => {
+    const supportNote =
+      shareBtn.parentElement.parentElement.getElementsByClassName(
+        "fsb-support-note"
+      )[0];
+
+    const domainInput =
+      shareBtn.parentElement.parentElement.getElementsByClassName(
+        "fsb-domain"
+      )[0];
+
+    supportNote.classList.add("fsb-d-none");
+
+    let note =
+      shareBtn.parentElement.parentElement.getElementsByClassName(
+        "fsb-note"
+      )[0];
+
+    if (!note) {
+      note = document.createElement("p");
+      note.classList.add("fsb-note");
+      note.classList.add("fsb-d-none");
+      supportNote.parentNode.insertBefore(note, supportNote.nextSibling);
+    }
+
+    const supportNoteLink =
+      shareBtn.parentElement.parentElement.getElementsByClassName(
+        "fsb-support-note-link"
+      )[0];
+
+    if (note) {
+      note.classList.add("fsb-d-none");
+    }
+
+    if (!supportedSoftware.includes(window.fsbGlobalSoftware)) {
+      supportNoteLink.href = `https://${domainInput.value}`;
+      supportNoteLink.innerHTML = domainInput.value;
+      supportNote.classList.remove("fsb-d-none");
+    }
+
+    if (note && notes[window.fsbGlobalSoftware]) {
+      note.innerHTML = notes[window.fsbGlobalSoftware];
+      note.classList.remove("fsb-d-none");
     }
   };
 
@@ -235,10 +250,9 @@
     const iconEl = el.parentElement.getElementsByClassName("fsb-icon")[0];
 
     el.dataset.software = software;
+    window.fsbGlobalSoftware = software;
 
-    if (software) {
-      window.fsbGlobalSoftware = software;
-    }
+    checkPlatformSupport(shareBtn);
 
     if (software && knownSoftware.includes(software)) {
       updateTheIcon(iconEl, software);
@@ -340,6 +354,7 @@
       const iconEl =
         domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
 
+      hidePlatformSupportVisibilityNote(shareBtn);
       updateTheIcon(iconEl, "question");
 
       if (domainInput.value) {
@@ -353,6 +368,7 @@
 
     domainInput.addEventListener("change", () => {
       // shareBtn.disabled = true;
+      // hidePlatformSupportVisibilityNote(shareBtn);
     });
 
     fsbPrompt.addEventListener("submit", (ev) => {
