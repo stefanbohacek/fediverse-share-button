@@ -308,6 +308,10 @@
     ? localStorage.getItem("fsb-software")
     : false;
 
+  if (savedSoftware) {
+    window.fsbGlobalSoftware = software;
+  }
+
   [...document.getElementsByClassName("fsb-prompt")].forEach((fsbPrompt) => {
     const domainInput = fsbPrompt.getElementsByClassName("fsb-domain")[0];
     const shareBtn = fsbPrompt.getElementsByClassName("fsb-button")[0];
@@ -332,7 +336,7 @@
     }
 
     domainInput.addEventListener("input", () => {
-      shareBtn.disabled = true;      
+      shareBtn.disabled = true;
       const iconEl =
         domainInput.parentElement.getElementsByClassName("fsb-icon")[0];
 
@@ -361,7 +365,7 @@
         if (canUseLocalStorage) {
           localStorage.setItem("fsb-domain", domain);
           if (window.fsbGlobalSoftware) {
-            // localStorage.setItem("fsb-software", window.fsbGlobalSoftware);
+            localStorage.setItem("fsb-software", window.fsbGlobalSoftware);
           }
         }
 
