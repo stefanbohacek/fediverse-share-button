@@ -128,6 +128,7 @@ npm run build
 
 - [fediverse.wake.st](https://fediverse.wake.st)
 - [flowbite.com/icons](https://flowbite.com/icons)
+- [svgrepo.com](https://www.svgrepo.com)
 
 ### JS and CSS code
 
