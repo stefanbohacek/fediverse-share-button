@@ -114,12 +114,11 @@ See also the [#enhancement](https://github.com/stefanbohacek/fediverse-share-but
 
 ## Development
 
-After making changes to the JS and CSS files, make sure to minify them.
+Install dependencies and start the build script.
 
 ```sh
-npm install terser -g
-npm install minify -g
-npm run build
+npm install
+npm run dev
 ```
 
 ## Attributions
