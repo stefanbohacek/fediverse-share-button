@@ -30,7 +30,24 @@
   </style>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" data-bs-theme="dark">
+    <script>
+      const toggleDarkMode = (enabled) => {
+        if (enabled) {
+          document.body.setAttribute('data-bs-theme', 'dark');
+        } else {
+          document.body.setAttribute('data-bs-theme', 'light');
+        }
+      }
+
+      if (window.matchMedia) {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      });
+    </script>
   <main class="flex-shrink-0">
     <div class="container">
       <h1 class="mt-5 fw-bold">Fediverse Sharing Button</h1>
