@@ -3,7 +3,7 @@
 
 Let your site's visitors share your work with the fediverse!
 
-You can see a demo at [fediverse-share-button.stefanbohacek.dev](https://fediverse-share-button.stefanbohacek.dev/). For a list of supported platforms, [read below](#q-which-platforms-are-supported).
+You can see a demo at [fediverse-share-button.stefanbohacek.com](https://fediverse-share-button.stefanbohacek.com/). For a list of supported platforms, [read below](#q-which-platforms-are-supported).
 
 ## Features
 
@@ -29,7 +29,7 @@ Add the following snippet to where you want your sharing button to show up:
       class="fsb-input fsb-domain"
       aria-label="Server domain">
     <button class="fsb-button"
-      type="submit"><img src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/icons/mastodon.svg"
+      type="submit"><img src="https://fediverse-share-button.stefanbohacek.com/fediverse-share-button/icons/mastodon.svg"
         class="fsb-icon"></span>Share</button>
   </div>
   <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit <a
@@ -37,8 +37,8 @@ Add the following snippet to where you want your sharing button to show up:
       target="_blank"
       href=""></a>.</p>
 </form>
-<link rel="stylesheet" href="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/styles.min.css">
-<script src="https://fediverse-share-button.stefanbohacek.dev/fediverse-share-button/script.min.js" defer class="fsb-script"></script>
+<link rel="stylesheet" href="https://fediverse-share-button.stefanbohacek.com/fediverse-share-button/styles.min.css">
+<script src="https://fediverse-share-button.stefanbohacek.com/fediverse-share-button/script.min.js" defer class="fsb-script"></script>
 ```
 
 Alternatively, you can download the code from this repo and host all the JS, CSS, and image files yourself.

@@ -3,7 +3,7 @@ const doneTyping = async (el) => {
   const domain = getDomain(el.value);
 
   const resp = await fetch(
-    `https://fediverse-info.stefanbohacek.dev/node-info?domain=${domain}&onlysoftware=true`
+    `https://fediverse-info.stefanbohacek.com/node-info?domain=${domain}&onlysoftware=true`
   );
 
   shareBtn.innerHTML = shareBtn.innerHTML.replace("Loading", "Share");
