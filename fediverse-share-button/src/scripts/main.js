@@ -79,7 +79,7 @@
             ["diaspora", "friendica"].includes(domainInput.dataset.software)
           ) {
             shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
-          } else if (domainInput.dataset.software === "hubzilla") {
+          } else if (["hubzilla", "streams", "forte"].includes(domainInput.dataset.software) {
             shareURL = `https://${domain}/rpost?url=${getPageURL()}&body=${shareText}[br][br]`;
           } else if (domainInput.dataset.software === "lemmy") {
             shareURL = `https://${domain}/create_post?title=${shareText}&url=${getPageURL()}&body=${getPageDescription()}`;
