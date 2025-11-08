@@ -74,6 +74,7 @@
           diaspora: "bookmarklet?title={TITLE}&notes={DESCRIPTION}&url={URL}",
           fedibird: "share?text={TEXT}",
           firefish: "share?text={TEXT}",
+          forte: "rpost?title={TITLE}&body={DESCRIPTION}%0A{URL}",
           foundkey: "share?text={TEXT}",
           friendica: "compose?title={TITLE}&body={DESCRIPTION}%0A{URL}",
           glitchcafe: "share?text={TEXT}",
@@ -86,6 +87,7 @@
           meisskey: "share?text={TEXT}",
           microdotblog: "post?text=[{TITLE}]({URL})%0A%0A{DESCRIPTION}",
           misskey: "share?text={TEXT}",
+          streams: "rpost?title={TITLE}&body={DESCRIPTION}%0A{URL}",
         };
 
         let shareURL = `https://${domain}/share?text=${
@@ -94,10 +96,10 @@
 
         if (domainInput?.dataset?.software) {
           const software = domainInput.dataset.software;
-          const pattern = shareEndpoints[software];
+          const endpoint = shareEndpoints[software];
 
-          if (pattern) {
-            shareURL = `https://${domain}/${pattern}`
+          if (endpoint) {
+            shareURL = `https://${domain}/${endpoint}`
               .replace("{TEXT}", shareText)
               .replace("{TITLE}", shareText)
               .replace("{DESCRIPTION}", getPageDescription())
