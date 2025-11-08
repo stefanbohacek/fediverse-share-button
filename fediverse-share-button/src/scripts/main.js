@@ -69,24 +69,39 @@
           }
         }
 
+        const shareEndpoints = {
+          calckey: "share?text={TEXT}",
+          diaspora: "bookmarklet?title={TITLE}&notes={DESCRIPTION}&url={URL}",
+          fedibird: "share?text={TEXT}",
+          firefish: "share?text={TEXT}",
+          foundkey: "share?text={TEXT}",
+          friendica: "compose?title={TITLE}&body={DESCRIPTION}%0A{URL}",
+          glitchcafe: "share?text={TEXT}",
+          gnusocial: "notice/new?status_textarea={TEXT}",
+          hometown: "share?text={TEXT}",
+          hubzilla: "rpost?title={TITLE}&body={DESCRIPTION}%0A{URL}",
+          kbin: "new/link?url={URL}",
+          lemmy: "create_post?url={URL}&title={TITLE}&body={DESCRIPTION}",
+          mastodon: "share?text={TEXT}",
+          meisskey: "share?text={TEXT}",
+          microdotblog: "post?text=[{TITLE}]({URL})%0A%0A{DESCRIPTION}",
+          misskey: "share?text={TEXT}",
+        };
+
         let shareURL = `https://${domain}/share?text=${
-          // getPageTitle() + " " + getPageURL()
           shareText + "%0A%0A" + getPageURL()
         }`;
 
         if (domainInput?.dataset?.software) {
-          if (
-            ["diaspora", "friendica"].includes(domainInput.dataset.software)
-          ) {
-            shareURL = `https://${domain}/bookmarklet?url=${getPageURL()}&title=${shareText}&note=${getPageDescription()}`;
-          } else if (domainInput.dataset.software === "hubzilla") {
-            shareURL = `https://${domain}/rpost?url=${getPageURL()}&body=${shareText}[br][br]`;
-          } else if (domainInput.dataset.software === "lemmy") {
-            shareURL = `https://${domain}/create_post?title=${shareText}&url=${getPageURL()}&body=${getPageDescription()}`;
-          } else if (domainInput.dataset.software === "threads") {
-            shareURL = `https://${domain}/intent/post?text=${
-              shareText + "%0A%0A" + getPageURL()
-            }`;
+          const software = domainInput.dataset.software;
+          const pattern = shareEndpoints[software];
+
+          if (pattern) {
+            shareURL = `https://${domain}/${pattern}`
+              .replace("{TEXT}", shareText)
+              .replace("{TITLE}", shareText)
+              .replace("{DESCRIPTION}", getPageDescription())
+              .replace("{URL}", getPageURL());
           }
         }
 
