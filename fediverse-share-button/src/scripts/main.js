@@ -100,7 +100,7 @@
 
           if (endpoint) {
             shareURL = `https://${domain}/${endpoint}`
-              .replace("{TEXT}", shareText)
+              .replace("{TEXT}", shareText + "%0A%0A" + getPageURL())
               .replace("{TITLE}", shareText)
               .replace("{DESCRIPTION}", getPageDescription())
               .replace("{URL}", getPageURL());
