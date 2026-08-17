@@ -110,7 +110,7 @@ See also the [#enhancement](https://github.com/stefanbohacek/fediverse-share-but
 
 ## Tutorials
 
-- [Adding a Fediverse Share Button to my Emacs Nikola Blog](https://blog.notroot.online/posts/adding-a-fediverse-share-button-to-my-emacs-nikola-blog/) by [Notroot](https://notroot.online/@notroot)
+- [Adding a Fediverse Share Button to my Emacs Nikola Blog](https://notroot.online/posts/adding-a-fediverse-share-button-to-my-emacs-nikola-blog/) by [Notroot](https://notroot.online/@notroot)
 
 ## Development
 
